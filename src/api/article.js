@@ -1,6 +1,6 @@
 import fetch from '@/utils/fetch'
 
-export function fetchList(query) {
+export function fetchList (query) {
   return fetch({
     url: '/article/list',
     method: 'get',
@@ -8,14 +8,14 @@ export function fetchList(query) {
   })
 }
 
-export function fetchArticle() {
+export function fetchArticle () {
   return fetch({
     url: '/article/detail',
     method: 'get'
   })
 }
 
-export function fetchPv(pv) {
+export function fetchPv (pv) {
   return fetch({
     url: '/article/pv',
     method: 'get',

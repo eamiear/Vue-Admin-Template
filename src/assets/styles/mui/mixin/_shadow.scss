@@ -1,0 +1,25 @@
+@mixin box-shadow(
+  $horizontal-shadow-pos,
+  $vertical-shadow-pos,
+  $blur-distance,
+  $shadow-size,
+  $shadow-color){
+
+  box-shadow: $horizontal-shadow-pos,$vertical-shadow-pos,$blur-distance,$shadow-size,$shadow-color !important;
+}
+
+@mixin box-shadow-factory($shadow){
+  $box-shadow: null;
+  @if(length($shadow) == 1){
+    $box-shadow: $shadow;
+  }@else {
+    @each $s in $shadow{
+      $box-shadow : append($shadow, $s,comma);
+    }
+  }
+  box-shadow: $box-shadow;
+}
+
+@mixin text-shadow(){
+
+}

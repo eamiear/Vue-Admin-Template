@@ -1,0 +1,28 @@
+// Card Mixins
+// --------------------------
+@mixin card-factory(){
+  @each $type in $card-list{
+    $size:    nth($type,1);
+    $shadow1: nth($type,2);
+    $shadow2: nth($type,3);
+    @if($size == 0){
+      .card-1{
+        @include border($deep-grey);
+        -webkit-transition: border .2s, box-shadow .2s;
+        transition: border .2s, box-shadow .2s;
+      }
+    }@else {
+      .card-#{$size},
+      .card-hover-#{$size}:hover{
+        @include box-shadow-factory($shadow1 $shadow2);
+      }
+      .card-#{$size}{
+        -webkit-transition: border .2s, box-shadow .2s;
+        transition: border .2s, box-shadow .2s;
+      }
+      .card-hover-#{$size}:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

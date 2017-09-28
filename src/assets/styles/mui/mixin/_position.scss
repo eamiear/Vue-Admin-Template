@@ -1,0 +1,238 @@
+@mixin direct-value($unit:0,$direction:all){
+  @if($direction == all){
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  @if($direction == top){
+    top : $unit;
+  }
+  @if($direction == bottom){
+    bottom: $unit;
+  }
+  @if($direction == left){
+    left: $unit;
+  }
+  @if($direction == right){
+    right: $unit;
+  }
+}
+@mixin position($type:absolute,$unit:0,$direction:all,$flag:0){
+  @if($flag == 0){
+    position: $type;
+  }
+  @include direct-value($unit,$direction);
+}
+@mixin position-abs($type:absolute,$direction:all){
+  position: $type;
+  @if($direction == all){
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }@else if($direction == left-top){
+    left: 0;
+    top: 0;
+  }@else if($direction == right-top){
+    top: 0;
+    right: 0;
+  }@else if($direction == top-center){
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto !important;
+  }@else if($direction == left-bottom){
+    left: 0;
+    bottom: 0;
+  }@else if($direction == right-bottom){
+    right: 0;
+    bottom: 0;
+  }@else if($direction == bottom-center){
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }@else if($direction == left-middle){
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+   // margin-top: -1.4em\9;
+  }@else if($direction == right-middle){
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+   // margin-top: -1.4em\9;
+  }@else if($direction == out-top-left){
+    top: 0;
+    right: 100%;
+  }@else if($direction == out-left-top){
+    left: 0;
+    bottom: 100%;
+  }@else if($direction == out-left-bottom){
+    left: 0;
+    top: 100%;
+  }@else if($direction == out-bottom-left){
+    bottom: 0;
+    right: 100%;
+  }@else if($direction == out-top-right){
+    top: 0;
+    left: 100%;
+  }@else if($direction == out-right-top){
+    right: 0;
+    bottom: 100%;
+  }@else if($direction == out-right-bottom){
+    right: 0;
+    top: 100%;
+  }@else if($direction == out-bottom-right){
+    bottom: 0;
+    left: 100%;
+  }@else if($direction == out-top-center){
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin: auto !important;
+  }@else if($direction == out-bottom-center){
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto !important;
+  }@else if($direction == out-left-middle){
+    right: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    //margin-top: -1.4em\9;
+  }@else if($direction == out-right-middle){
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+   // margin-top: -1.4em\9;
+  }
+}
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+@mixin position-left-top($type:absolute,$left:0,$top:0){
+  @include position-abs($type,left-top);
+}
+
+@mixin position-right-top($type:absolute,$right:0,$top:0){
+  @include position-abs($type,right-top);
+}
+
+@mixin position-left-bottom($type:absolute,$left:0,$bottom:0){
+  @include position-abs($type,left-bottom);
+}
+
+@mixin position-right-bottom($type:absolute,$right:0,$bottom:0){
+  @include position-abs($type,right-bottom);
+}
+
+@mixin position-top-center($type:absolute){
+  @include position-abs($type,top-center);
+}
+
+@mixin position-bottom-center($type:absolute){
+  @include position-abs($type,bottom-center);
+}
+
+@mixin position-left-middle($type:absolute){
+  @include position-abs($type,left-middle);
+}
+
+@mixin position-right-middle($type:absolute){
+  @include position-abs($type,right-middle);
+}
+
+// position absolute outer
+// ----------------------------------------
+@mixin position-out-left-top($type:absolute){
+  @include position-abs($type,out-left-top);
+}
+
+@mixin position-out-right-top($type:absolute){
+  @include position-abs($type,out-right-top);
+}
+
+@mixin position-out-left-bottom($type:absolute){
+  @include position-abs($type,out-left-bottom);
+}
+
+@mixin position-out-right-bottom($type:absolute){
+  @include position-abs($type,out-right-bottom);
+}
+
+@mixin position-out-top-center($type:absolute){
+  @include position-abs($type,out-top-center);
+}
+
+@mixin position-out-bottom-center($type:absolute){
+  @include position-abs($type,out-bottom-center);
+}
+
+@mixin position-out-left-middle($type:absolute){
+  @include position-abs($type,out-left-middle);
+}
+
+@mixin position-out-right-middle($type:absolute){
+  @include position-abs($type,out-right-middle);
+}
+
+@mixin position-out-bottom-left($type:absolute){
+  @include position-abs($type,out-bottom-left);
+}
+@mixin position-out-top-left($type:absolute){
+  @include position-abs($type,out-top-left);
+}
+@mixin position-out-bottom-right($type:absolute){
+  @include position-abs($type,out-bottom-right);
+}
+@mixin position-out-top-right($type:absolute){
+  @include position-abs($type,out-top-right);
+}
+
+// position fixed
+// ----------------------------------------
+@mixin position-fixed($unit:0,$direction:all){
+  @include position(fixed,$unit,$direction);
+}
+
+@mixin fixed-left-top($left:0,$top:0){
+  @include position-left-top(fixed);
+}
+
+@mixin fixed-right-top($right:0,$top:0){
+  @include position-right-top(fixed);
+}
+
+@mixin fixed-left-bottom($left:0,$bottom:0){
+  @include position-left-bottom(fixed);
+}
+
+@mixin fixed-right-bottom($right:0,$bottom:0){
+  @include position-right-bottom(fixed);
+}
+
+@mixin fixed-top-center(){
+  @include position-top-center(fixed);
+}
+
+@mixin fixed-bottom-center(){
+  @include position-bottom-center(fixed);
+}
+
+@mixin fixed-left-middle(){
+  @include position-left-middle(fixed);
+}
+
+@mixin fixed-right-middle(){
+  @include position-right-middle(fixed);
+}
+
+

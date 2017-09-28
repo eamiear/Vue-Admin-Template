@@ -1,0 +1,42 @@
+@mixin basic-button-variant($shadow-color){
+  &,
+  &:hover,
+  &:active,
+  &:focus{
+    background: 0 0!important;
+    border-color: transparent;
+    outline: none;
+  }
+  &{
+    color: $shadow-color;
+    box-shadow: 0 0 0 1px $shadow-color inset!important;
+  }
+  &:hover,
+  &:active,
+  &:focus{
+    color: darken($shadow-color, 5%);
+    box-shadow: 0 0 0 1px darken($shadow-color, 5%) inset!important;
+  }
+}
+
+@mixin button-factory(){
+  @each $item in $basic-button-list{
+    $color-name:  nth($item,1);
+    $color-value: nth($item,2);
+    $text-color:  nth($item,3);
+    .btn-#{$color-name}{
+      @include button-variant($text-color,$color-value, darken($color-value, 5%));
+    }
+  }
+}
+@mixin basic-button-factory(){
+  @each $item in $basic-button-list{
+    $color-name:  nth($item,1);
+    $color-value: nth($item,2);
+    $text-color:  nth($item,3);
+    .basic.btn-#{$color-name}{
+      @include basic-button-variant($color-value);
+    }
+  }
+}
+

@@ -1,0 +1,53 @@
+///*
+// * Component: Attachments
+// * --------------
+// */
+@import "../bootstrap/mixins";
+
+.attachments {
+  @include clearfix;
+  @extend .list-unstyled;
+  li {
+    float: left;
+    width: 200px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+}
+
+.attachment-name {
+  font-weight: bold;
+  color: #666;
+}
+
+.attachment-icon,
+.attachment-info,
+.attachment-size {
+  display: block;
+}
+
+.attachment-info {
+  padding: 10px;
+  background: #f4f4f4;
+}
+
+.attachment-size {
+  color: #999;
+  font-size: 12px;
+  margin-bottom:0;
+}
+
+.attachment-icon {
+  text-align: center;
+  font-size: 65px;
+  color: #666;
+  padding: 20px 10px;
+  &.has-img {
+    padding: 0;
+    > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

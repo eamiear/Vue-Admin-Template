@@ -1,0 +1,9 @@
+//@import "mixin/border-radius";
+
+// Border Radius
+// ------------------------------------------
+@include border-radius-factory();
+// Remove border radius
+.flat {
+  @include border-radius(0);
+}

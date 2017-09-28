@@ -15,7 +15,8 @@ config.entry.app = [
   'webpack-hot-middleware/client?reload=true',
   config.entry.app
 ]
-
+// enable devtool
+config.devtool = '#source-map'
 config.plugins.push(
   new webpack.DefinePlugin({
     'process.env': configure.dev.env

@@ -1,0 +1,47 @@
+@import "~compass-mixins/lib/compass";
+
+// Text Utilities
+// ---------------------------------------
+.text{
+  vertical-align: middle;
+  text-align: left;
+  padding : 4px 0;
+  &,
+  .text-label,
+  .text-desc{
+    margin: 0;
+  }
+  .text-label,.text-desc{
+    display: inline-block;
+  }
+  .text-label{
+    color: #555;
+    font-size: $font-size - 1;
+    font-weight: 400;
+  }
+  .text-desc{
+    color: #999;
+    font-size: $font-size-small;
+    font-weight: normal;
+  }
+}
+.text-vertical{
+  word-break:break-all;
+  line-height:1;
+  text-align:center;
+  width:0.6em;
+}
+.text-ellipsis{
+  //@include text-ellipsis();
+  @include ellipsis();
+}
+.text-bold {
+  &, &.table td, &.table th {
+    font-weight: 700;
+  }
+}
+
+// Text Colors
+// --------------------------
+@include text-color-factory;
+

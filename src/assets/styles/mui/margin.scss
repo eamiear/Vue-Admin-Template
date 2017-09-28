@@ -1,0 +1,112 @@
+//@import "mixin/margin";
+
+// Margin: top  bottom
+// -----------------------------------
+.margin-0{
+  @include margin-vertical-alone($unit-0);
+}
+.margin-4{
+  @include margin-vertical-alone($unit-4);
+}
+.margin-8{
+  @include margin-vertical-alone($unit-8);
+}
+.margin-12{
+  @include margin-vertical-alone($unit-12);
+}
+.margin-16{
+  @include margin-vertical-alone($unit-16);
+}
+.margin-24{
+  @include margin-vertical-alone($unit-24);
+}
+.margin-32{
+  @include margin-vertical-alone($unit-32);
+}
+.margin-48{
+  @include margin-vertical-alone($unit-48);
+}
+.margin-64{
+  @include margin-vertical-alone($unit-64);
+}
+.margin-128{
+  @include margin-vertical-alone($unit-128);
+}
+// Margin:  left  right
+// -----------------------------------
+.margin-lr-0{
+  @include margin-horizontal-alone($unit-0);
+}
+.margin-lr-4{
+  @include margin-horizontal-alone($unit-4);
+}
+.margin-lr-8{
+  @include margin-horizontal-alone($unit-8);
+}
+.margin-lr-12{
+  @include margin-horizontal-alone($unit-12);
+}
+.margin-lr-16{
+  @include margin-horizontal-alone($unit-16);
+}
+.margin-lr-24{
+  @include margin-horizontal-alone($unit-24);
+}
+.margin-lr-32{
+  @include margin-horizontal-alone($unit-32);
+}
+.margin-lr-48{
+  @include margin-horizontal-alone($unit-48);
+}
+.margin-lr-64{
+  @include margin-horizontal-alone($unit-64);
+}
+.margin-lr-128{
+  @include margin-horizontal-alone($unit-128);
+}
+
+// Margin: top right bottom left alone
+// -------------------------------------------
+.margin-top{
+  @include margin($unit-4,top);
+}
+.margin-bottom{
+  @include margin($unit-4,bottom);
+}
+.margin-left{
+  @include margin($unit-12,left);
+}
+.margin-right{
+  @include margin($unit-12,right);
+}
+
+// Margin: top right bottom left
+// -----------------------------------
+.margin-none{
+  @include margin($unit-0);
+}
+.margin-tiny{
+  @include margin-short($unit-2,$unit-4);
+}
+.margin-small{
+  @include margin-short($unit-4,$unit-8);
+}
+.margin-normal{
+  @include margin-short($unit-4,$unit-12);
+}
+.margin-medium,
+.margin{
+  @include margin-short($unit-8,$unit-16);
+}
+.margin-large{
+  @include margin-short($unit-12,$unit-24);
+}
+.margin-xlarge{
+  @include margin-short($unit-16,$unit-32);
+}
+.margin-xxlarge{
+  @include margin-short($unit-24,$unit-48);
+}
+.margin-huge{
+  @include margin-short($unit-64,$unit-128);
+}

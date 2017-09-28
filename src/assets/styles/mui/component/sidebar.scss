@@ -1,0 +1,214 @@
+///*
+// * Component: Sidebar
+// * ----------------
+// */
+// ==== VIRIABLE ====
+$sidebar-width: 300px;
+$sidebar-anchor-height: 35px;
+$sidebar-panel-header-height: 44px;
+$sidebar-list-item-text-indent: 59px;
+
+$sidebar-base-color: #fff;
+$sidebar-color: $sidebar-base-color;
+$sidebar-bg-color: #fff;
+$sidebar-border-color: #e2e2e2;
+
+$sidebar-panel-hd-bg-color: #f3f5f9;
+$sidebar-panel-hd-hover-bg-color: #fff;
+
+$sidebar-item-base-color: $sidebar-base-color;
+$sidebar-item-base-bg-color: #59a4ff;
+$sidebar-item-active-color: $sidebar-item-base-bg-color;
+$sidebar-list-group-item-color: rgb(102,102,102);
+$sidebar-list-group-item-hover-color: $sidebar-item-base-bg-color;
+
+$sidebar-anchor-color: #333;
+
+// ===== SIDEBAR Layout Var ====
+$sidebar-fixed-top: 65px !default;
+
+
+// ===== SIDEBAR BASE ====
+
+.sidebar-blue{
+
+  > .sidebar{
+    width: $sidebar-width;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    z-index: 1;
+
+    border: 1px solid $sidebar-border-color;
+
+    .panel-group .panel + .panel{
+      margin-top: 0;
+    }
+
+    .panel {
+      border: 0;
+      box-shadow: none;
+
+      .panel-heading{
+        padding: 0;
+
+        .icon-right{
+          float: right;
+          line-height: 44px;
+        }
+      }
+
+      a {
+        display: block;
+        height: $sidebar-panel-header-height;
+        line-height: $sidebar-panel-header-height;
+        padding: 0 15px;
+      }
+
+      .list-group-item{
+        text-indent: $sidebar-list-item-text-indent;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        line-height: $sidebar-panel-header-height;
+      }
+
+      > .in ~ .panel-heading{
+        a > .icon-right:before{
+          content: "\e113";
+        }
+      }
+    }
+
+    a:link,
+    a:focus,
+    a:visited,
+    a:active,
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  // ===== SIDEBAR THEME ====
+  > .sidebar{
+    background-color: $sidebar-bg-color;
+
+    .panel{
+      > .panel-heading > .panel-title{
+        background-color: $sidebar-panel-hd-bg-color;
+      }
+
+      .panel-title.active{
+        color: $sidebar-base-color;
+        background-color: $blue-grey;
+
+        a{
+          color: $sidebar-base-color;
+        }
+      }
+
+      a {
+        color: $sidebar-anchor-color;
+      }
+
+      .list-group-item{
+        color: $sidebar-list-group-item-color;
+
+        &:focus,
+        &:active,
+        &:hover,
+        &.active{
+          color: $sidebar-item-base-color;
+          background: $sidebar-list-group-item-hover-color;
+        }
+      }
+    }
+  }
+
+}
+
+
+// ===== SIDEBAR Only With Icons ====
+$sidebar-icon-width: 70px;
+$sidebar-icon-color: $sidebar-base-color;
+$sidebar-icon-bg-color: $black;
+$sidebar-icon-hover-color: $sidebar-base-color;
+$sidebar-icon-hover-bg-color: $black;
+$siebar-icon-item-hover-bg-color: $deep-grey;
+$sidebar-icon-size: 36px;
+
+
+.sidebar-icon{
+  height: 100%;
+  width: $sidebar-icon-width;
+  color: $sidebar-icon-color;
+  background-color: $sidebar-icon-bg-color;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+
+  &:hover{
+    color: $sidebar-icon-hover-color;
+    background-color: $sidebar-icon-hover-bg-color;
+  }
+
+  .icon-item,
+  a {
+    display: block;
+    padding: 16px 2px 16px 16px;
+    color: $sidebar-base-color;
+
+    -webkit-transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+    transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+
+    &:hover{
+      background-color: $siebar-icon-item-hover-bg-color;
+    }
+  }
+  a i{
+    font-size: $sidebar-icon-size;
+  }
+
+  // horizontal type
+
+  &.horizontal{
+    width: 100%;
+    position: relative;
+
+    .icon-item,
+    a {
+      float: left;
+      padding: 16px;
+    }
+  }
+}
+
+
+// ===== SIDEBAR Layout ====
+// fiexed
+
+.sidebar.fixed{
+  position: fixed;
+  top: $sidebar-fixed-top;
+
+  & + div,
+  & + .article{
+    padding-left: $sidebar-width;
+    overflow-y: auto;
+  }
+}
+
+// float
+
+.sidebar.floated{
+  float: left;
+
+  & + div,
+  & + .article{
+    overflow-y: auto;
+  }
+}
+

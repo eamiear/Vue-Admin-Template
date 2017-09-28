@@ -1,0 +1,113 @@
+//@import "mixin/padding";
+
+// Padding: top  bottom
+// -------------------------------------------
+.padding-0{
+  @include padding-vertical-alone($unit-0);
+}
+.padding-4{
+  @include padding-vertical-alone($unit-4);
+}
+.padding-8{
+  @include padding-vertical-alone($unit-8);
+}
+.padding-12{
+  @include padding-vertical-alone($unit-12);
+}
+.padding-16{
+  @include padding-vertical-alone($unit-16);
+}
+.padding-24{
+  @include padding-vertical-alone($unit-24);
+}
+.padding-32{
+  @include padding-vertical-alone($unit-32);
+}
+.padding-48{
+  @include padding-vertical-alone($unit-48);
+}
+.padding-64{
+  @include padding-vertical-alone($unit-64);
+}
+.padding-128{
+  @include padding-vertical-alone($unit-128);
+}
+
+// Padding: left  right
+// -------------------------------------------
+.padding-lr-0{
+  @include padding-horizontal-alone($unit-0);
+}
+.padding-lr-4{
+  @include padding-horizontal-alone($unit-4);
+}
+.padding-lr-8{
+  @include padding-horizontal-alone($unit-8);
+}
+.padding-lr-12{
+  @include padding-horizontal-alone($unit-12);
+}
+.padding-lr-16{
+  @include padding-horizontal-alone($unit-16);
+}
+.padding-lr-24{
+  @include padding-horizontal-alone($unit-24);
+}
+.padding-lr-32{
+  @include padding-horizontal-alone($unit-32);
+}
+.padding-lr-48{
+  @include padding-horizontal-alone($unit-48);
+}
+.padding-lr-64{
+  @include padding-horizontal-alone($unit-64);
+}
+.padding-lr-128{
+  @include padding-horizontal-alone($unit-128);
+}
+
+// Padding: top right bottom left alone
+// -------------------------------------------
+.padding-top{
+  @include padding($unit-4,top);
+}
+.padding-bottom{
+  @include padding($unit-4,bottom);
+}
+.padding-left{
+  @include padding($unit-12,left);
+}
+.padding-right{
+  @include padding($unit-12,right);
+}
+
+// Padding: top right bottom left
+// -------------------------------------------
+.padding-none{
+  @include padding($unit-0);
+}
+.padding-tiny{
+  @include padding-short($unit-2,$unit-4);
+}
+.padding-small{
+  @include padding-short($unit-4,$unit-8);
+}
+.padding-normal{
+  @include padding-short($unit-4,$unit-12);
+}
+.padding-medium,
+.padding{
+  @include padding-short($unit-8,$unit-16);
+}
+.padding-large{
+  @include padding-short($unit-12,$unit-24);
+}
+.padding-xlarge{
+  @include padding-short($unit-16,$unit-32);
+}
+.padding-xxlarge{
+  @include padding-short($unit-24,$unit-48);
+}
+.padding-huge{
+  @include padding-short($unit-64,$unit-128);
+}

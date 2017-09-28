@@ -1,0 +1,35 @@
+
+//@import "mixin/font";
+
+// Font size
+// --------------------------
+.font-tiny{
+  @include font-size($font-size-tiny);
+}
+.font-small{
+  @include font-size($font-size-small);
+}
+.font,
+.font-medium{
+  @include font-size($font-size-medium);
+}
+.font-large{
+  @include font-size($font-size-large);
+}
+.font-xlarge{
+  @include font-size($font-size-xlarge);
+}
+.font-xxlarge{
+  @include font-size($font-size-xxlarge);
+}
+.font-xxxlarge{
+  @include font-size($font-size-xxxlarge);
+}
+.font-huge{
+  @include font-size($font-size-huge);
+}
+// Font weight
+// --------------------------
+.font-light {
+  font-weight: 300;
+}

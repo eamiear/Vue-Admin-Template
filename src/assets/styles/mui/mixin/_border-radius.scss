@@ -1,0 +1,31 @@
+//border radius
+//--------------------------------------------------------
+//border radius creator
+// use compass css3 instead
+
+/*@mixin border-radius($radius){
+  border-radius: $radius !important;
+}*/
+//Different radius each side
+@mixin border-radius-each($top-left,$top-right,$bottom-left,$bottom-right){
+  //border-top-left-radius: $top-left;
+  //border-top-right-radius: $top-right;
+  //border-bottom-right-radius: $bottom-right;
+  //border-bottom-left-radius: $bottom-left;
+  @include border-radius($top-left $top-right $bottom-left $bottom-right);
+}
+@mixin border-radius-factory(){
+  @each $item in $border-radius{
+    $border-radius-type: nth($item,1);
+    $border-radius-unit: nth($item,2);
+    @if($border-radius-type == circle) {
+      .#{$border-radius-type}{
+        @include border-radius(#{$border-radius-unit});
+      }
+    }@else {
+      .round-#{$border-radius-type}{
+        @include border-radius(#{$border-radius-unit});
+      }
+    }
+  }
+}

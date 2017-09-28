@@ -1,0 +1,118 @@
+//@import "mixin/arrow";
+
+$arrow-size: 9px!default;
+$arrow-color: $white!default;
+$xyoffset: 7%;
+$arrow-up-img-path: "img/triangle.png";
+.arrow-up-img{
+  display: inline-block;
+  width: image_width($arrow-up-img-path);
+  height: image_height($arrow-up-img-path);
+  background-image: inline-image($arrow-up-img-path);
+  &.arrow-top-right{
+    position: absolute;
+    right: $xyoffset;
+    bottom: 100%;
+  }
+  &.arrow-top-left{
+    position: absolute;
+    left: $xyoffset;
+    bottom: 100%;
+  }
+}
+.arrow-up{
+  @include triangle($arrow-size,$arrow-color,top);
+  &.arrow-top-right{
+    position: absolute;
+    right: $xyoffset;
+    bottom: 100%;
+  }
+  &.arrow-top-left{
+    position: absolute;
+    left: $xyoffset;
+    bottom: 100%;
+  }
+}
+.arrow-down{
+  @include triangle($arrow-size,$arrow-color,bottom);
+  &.arrow-bottom-right{
+    position: absolute;
+    right: $xyoffset;
+    top: 100%;
+  }
+  &.arrow-bottom-left{
+    position: absolute;
+    left: $xyoffset;
+    top: 100%;
+  }
+}
+.arrow-left{
+  @include triangle($arrow-size,$arrow-color,left);
+  &.arrow-left-top{
+    position: absolute;
+    right: 100%;
+    top: $xyoffset;
+  }
+}
+.arrow-right{
+  @include triangle($arrow-size,$arrow-color,right);
+  &.arrow-right-top{
+    position: absolute;
+    left: 100%;
+    top: $xyoffset;
+  }
+}
+$arrow-width: 14px;
+$arrow-height: 14px;
+$arrow-border-width: 1px;
+$arrow-border-color: #DADADB;
+$arrow-bg-color: $white;
+$offset: $arrow-width/2;
+.arrow-border-up{
+  @include arrow($arrow-width,$arrow-height,$arrow-border-width,$arrow-border-color,$arrow-bg-color,top);
+  &.arrow-top-right{
+    position: absolute;
+    right: $xyoffset;
+    top: -$offset;
+    z-index: -1111;
+  }
+  &.arrow-top-left{
+    position: absolute;
+    left: $xyoffset;
+    top: -$offset;
+    z-index: -1111;
+  }
+}
+.arrow-border-down{
+  @include arrow($arrow-width,$arrow-height,$arrow-border-width,$arrow-border-color,$arrow-bg-color,bottom);
+  &.arrow-bottom-right{
+    position: absolute;
+    right: $xyoffset;
+    bottom: -$offset;
+    z-index: -1111;
+  }
+  &.arrow-bottom-left{
+    position: absolute;
+    left: $xyoffset;
+    bottom: -$offset;
+    z-index: -1111;
+  }
+}
+.arrow-border-left{
+  @include arrow($arrow-width,$arrow-height,$arrow-border-width,$arrow-border-color,$arrow-bg-color,left);
+  &.arrow-left-top{
+    position: absolute;
+    top: $xyoffset;
+    left: -$offset;
+    z-index: -1111;
+  }
+}
+.arrow-border-right{
+  @include arrow($arrow-width,$arrow-height,$arrow-border-width,$arrow-border-color,$arrow-bg-color,right);
+  &.arrow-right-top{
+    position: absolute;
+    top: $xyoffset;
+    right: -$offset;
+    z-index: -1111;
+  }
+}

@@ -1,0 +1,62 @@
+///*
+// TRIANGLE  MIXIN
+//--------------------------*/
+@mixin triangle($borderWidth,$borderColor,$direction){
+  $default-border-style : solid;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: $borderWidth;
+  border-style: $default-border-style;
+  _border-style: dashed;
+  border-color: transparent;
+
+  @if($direction == top){
+    border-bottom-color: $borderColor;
+    _border-bottom-style: $default-border-style;
+  }
+
+  @if($direction == right){
+    border-left-color: $borderColor;
+    _border-left-style: $default-border-style;
+  }
+
+  @if($direction == bottom){
+    border-top-color: $borderColor;
+    _border-top-style: $default-border-style;
+  }
+
+  @if($direction == left){
+    border-right-color: $borderColor;
+    _border-right-style: $default-border-style;
+  }
+}
+
+@mixin arrow($width,$height,$borderWidth,$borderColor,$bgColor,$direction){
+  $default-border-style : solid;
+
+  display: inline-block;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  border-width: $borderWidth;
+  border-style: $default-border-style;
+  _border-style: dashed;
+  border-color: $borderColor;
+  background: $bgColor;
+  //border-radius: 2px;
+  border-right: 0;
+  border-bottom: 0;
+
+  @if($direction == top){
+    transform : rotate(45deg);
+  }@elseif($direction == left){
+    transform : rotate(-45deg);
+  }@elseif($direction == right){
+    transform :rotate(135deg);
+  }@elseif($direction == bottom){
+    transform:rotate(-135deg);
+  }
+}

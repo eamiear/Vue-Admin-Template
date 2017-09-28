@@ -1,0 +1,22 @@
+@mixin text-color($color){
+  color: $color !important;
+}
+
+@mixin text-ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-color-factory(){
+  $hover: "";
+  @each $item in $text-color-list{
+    $color-name:  nth($item,1);
+    $color-value: nth($item,2);
+    $text-color:  nth($item,3);
+    .text-#{$color-name},
+    .text-#{$color-name}-hover:hover{
+      @include text-color($color-value);
+    }
+  }
+}

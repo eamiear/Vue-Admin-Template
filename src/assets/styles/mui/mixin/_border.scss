@@ -1,0 +1,144 @@
+@mixin border-color($color){
+  border-color: $color !important;
+}
+@mixin border($color,$unit:1px,$type:solid,$direction:all){
+  @if($direction == all){
+    border: $color $type $unit;
+  }
+  @if($direction == top){
+    border-top : $color $type $unit !important;
+  }
+  @if($direction == bottom){
+    border-bottom: $color $type $unit !important;
+  }
+  @if($direction == left){
+    border-left: $color $type $unit !important;
+  }
+  @if($direction == right){
+    border-right: $color $type $unit !important;
+  }
+}
+@mixin border-color-factory(){
+  @each $item in $border-color-list{
+    $color-name:  nth($item,1);
+    $color-value: nth($item,2);
+    $text-color:  nth($item,3);
+    .border-#{$color-name},
+    .border-#{$color-name}-hover:hover{
+      @include border-color( $color-value);
+    }
+  }
+}
+@mixin border-factory(){
+  @each $border-direction in $border-directions{
+    @if($border-direction == none){
+      .no-border,
+      .border-0{
+//        @include border(none);
+          border: none;
+      }
+    }@else if($border-direction == all){
+      .border{
+        @include border($border-deep-grey);
+      }
+    }@else {
+      .border-#{$border-direction}{
+        @include border($border-deep-grey,1px,solid,#{$border-direction});
+      }
+    }
+  }
+}
+@mixin border-single-none(){
+  @each $dir in $border-directions{
+    .noborder-#{$dir}{
+      @if($dir == top){
+        border-top: none !important;
+      }@else if($dir == right){
+        border-right: none !important;
+      }@else if($dir == bottom){
+        border-bottom: none !important;
+      }@else if($dir == left){
+        border-left: none !important;
+      }
+    }
+  }
+}
+@mixin border-single-transparent(){
+  @each $dir in $border-directions{
+    .transparent-border-#{$dir},
+    .border-#{$dir}.transparent{
+      @if($dir == top){
+        border-top-color: transparent !important;
+      }@else if($dir == right){
+        border-right-color: transparent !important;
+      }@else if($dir == bottom){
+        border-bottom-color: transparent !important;
+      }@else if($dir == left){
+        border-left-color: transparent !important;
+      }@else if($dir == all){
+        border-color: transparent !important;
+      }
+    }
+  }
+}
+
+///*
+// BORDER TRIANGLE  MIXIN
+//--------------------------*/
+//@mixin triangle($borderWidth,$borderColor,$direction){
+//  $default-border-style : solid;
+//
+//  width: 0;
+//  height: 0;
+//  overflow: hidden;
+//  border-width: $borderWidth;
+//  border-style: $default-border-style;
+//  _border-style: dashed;
+//  border-color: transparent;
+//
+//  @if($direction == top){
+//    border-bottom-color: $borderColor;
+//    _border-bottom-style: $default-border-style;
+//  }
+//
+//  @if($direction == right){
+//    border-left-color: $borderColor;
+//    _border-left-style: $default-border-style;
+//  }
+//
+//  @if($direction == bottom){
+//    border-top-color: $borderColor;
+//    _border-top-style: $default-border-style;
+//  }
+//
+//  @if($direction == left){
+//    border-right-color: $borderColor;
+//    _border-right-style: $default-border-style;
+//  }
+//}
+//
+//@mixin arrow($width,$height,$borderWidth,$borderColor,$bgColor,$direction){
+//  $default-border-style : solid;
+//
+//  width: $width;
+//  height: $height;
+//  overflow: hidden;
+//  border-width: $borderWidth;
+//  border-style: $default-border-style;
+//  _border-style: dashed;
+//  border-color: $borderColor;
+//  background: $bgColor;
+//  border-radius: 2px;
+//  border-right: 0;
+//  border-bottom: 0;
+//
+//  @if($direction == top){
+//    transform : rotate(45deg);
+//  }@elseif($direction == left){
+//    transform : rotate(-45deg);
+//  }@elseif($direction == right){
+//    transform :rotate(90deg);
+//  }@elseif($direction == bottom){
+//    transform:rotate(-90deg);
+//  }
+//}

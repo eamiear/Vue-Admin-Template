@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+$title-color: #b8c7ce;
+$submenu-background-color: #2c3b41;
+$submenu-deep-background-color: rgb(38, 54, 60);
+$hover-menu__color: #fff;
+$hover-menu__background-color: #1e282c;
+$hover-menu__border-left-color: #3c8dbc;
+$hover-item__background-color: transparent;
+
+.skin-blue{
+  .el-menu{
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .el-menu .el-submenu__title:hover,
+  .el-menu .el-menu-item:hover,
+  .el-menu .el-menu-item.single-item.is-active,
+  .el-submenu.is-opened.is-active > .el-submenu__title{
+    color: $hover-menu__color;
+    background: $hover-menu__background-color;
+    border-left-color: $hover-menu__border-left-color;
+  }
+  .el-menu-item.is-active{
+    color: $white;
+  }
+  .el-menu-item, .el-submenu__title {
+    color: $title-color;
+    height: auto;
+    line-height: 1.4;
+    padding: 12px 5px 12px 15px;
+    border-left: 3px solid transparent;
+
+    i.fa,
+    .image{
+      margin-top: 2px;
+    }
+    i.fa{
+      width: 20px;
+    }
+    .label + .label{
+      margin-right: 2px;
+    }
+  }
+  // padding of menu item {level 1}
+  .el-menu-item, .el-submenu__title{
+    padding-left: 15px!important;
+  }
+  // padding of submenu item {level 2/3/4...}
+  .el-submenu .el-menu .el-menu-item{
+    padding-left: 30px!important;
+  }
+  .el-submenu .el-menu-item:hover, .el-submenu__title:hover{
+    background-color: $hover-item__background-color;
+  }
+  // submenu
+  .el-submenu{
+    margin: 0;
+    padding:0;
+
+    .el-menu{
+      padding: 0;
+      margin: 0 1px;
+      background-color: $submenu-background-color;
+    }
+    .el-menu-item{
+      display: block;
+      line-height: 1.4;
+      height: auto;
+      padding: 5px 5px 5px 15px;
+      transition: none;
+    }
+    .el-menu-item:hover,
+    .el-submenu .el-menu-item:hover,
+    .el-submenu .el-submenu__title:hover,
+    .el-submenu.is-opened .el-submenu__title{
+      border-left-color: transparent;
+    }
+    .el-menu-item:hover,
+    .el-submenu .el-menu-item:hover{
+      color: $white;
+    }
+    // submenu title style
+    .el-submenu.is-opened .el-submenu__title,
+    .el-submenu .el-submenu__title:hover{
+      background-color: $submenu-deep-background-color;
+    }
+  }
+}

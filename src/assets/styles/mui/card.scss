@@ -1,0 +1,52 @@
+//@import "mixin/shadow";
+//@import "mixin/card";
+
+// basic stylesheets of card
+.card{
+  max-width: 100%;
+  min-height: 0;
+  position: relative;
+  background: $white;
+  @include padding-short($unit-4,$unit-8);
+  & > .image,
+  & > .image > img,
+  & > img,
+  & > img.image{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  & > .content{
+    padding: $unit-4 $unit-12;
+    margin: $unit-0;
+    border: none;
+    > .header,
+    > .meta,
+    > .description{
+      margin: $unit-0;
+    }
+    > .header{
+      display: block;
+      color: rgba(0,0,0,.85);
+      font-weight: 700;
+    }
+    > .meta{
+      font-size: $font-size-small;
+      color: rgba(0,0,0,.4);
+    }
+    > .header + .description,
+    > .meta + .description{
+     /* margin-top: -6px;*/
+      padding: 4px 0;
+    }
+    > .description{
+      font-size: 13px;
+      clear: both;
+      color: rgba(0,0,0,.68);
+    }
+    > .extra-content{
+    }
+  }
+}
+// Card Size/Type
+@include card-factory();

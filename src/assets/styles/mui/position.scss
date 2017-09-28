@@ -1,0 +1,157 @@
+//@import "mixin/position";
+
+// position absolute
+// ----------------------------------------
+.position{
+  @include position();
+}
+.top{
+//  @include position(absolute,0,top);
+  @include position-left-top();
+}
+.right{
+//  @include position(absolute,0,right);
+  @include position-right-top();
+}
+.bottom{
+//  @include position(absolute,0,bottom);
+  @include position-left-top();
+}
+.left{
+//  @include position(absolute,0,left);
+  @include position-left-bottom();
+}
+.middle{
+  //@include position();
+  //margin: auto;
+  //width: 50%;
+  //height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.left-top{
+  @include position-left-top();
+}
+.right-top{
+  @include position-right-top();
+}
+.left-bottom{
+  @include position-left-bottom();
+}
+.right-bottom{
+  @include position-right-bottom();
+}
+.top-center{
+  @include position-top-center();
+}
+.bottom-center{
+  @include position-bottom-center();
+}
+.left-middle{
+  @include position-left-middle();
+}
+.right-middle{
+  @include position-right-middle();
+}
+// position absolute outer
+// ----------------------------------------
+.out-left-top{
+  @include position-out-left-top();
+}
+.out-right-top{
+  @include position-out-right-top();
+}
+.out-left-bottom{
+  @include position-out-left-bottom();
+}
+.out-right-bottom{
+  @include position-out-right-bottom();
+}
+.out-top-center{
+  @include position-out-top-center();
+}
+.out-bottom-center{
+  @include position-out-bottom-center();
+}
+.out-left-middle{
+  @include position-out-left-middle();
+}
+.out-right-middle {
+  @include position-out-right-middle();
+}
+.out-bottom-left {
+  @include position-out-bottom-left();
+}
+.out-top-left {
+  @include position-out-top-left();
+}
+.out-bottom-right {
+  @include position-out-bottom-right();
+}
+.out-top-right {
+  @include position-out-top-right();
+}
+
+
+// position fixed
+// ----------------------------------------
+.fixed-all{
+  @include position-fixed();
+}
+.fixed-top{
+//  @include position-fixed(0,top);
+  @include fixed-left-top();
+}
+.fixed-right{
+//  @include position-fixed(0,right);
+  @include fixed-right-top();
+}
+.fixed-bottom{
+//  @include position-fixed(0,bottom);
+  @include fixed-left-top();
+}
+.fixed-left{
+//  @include position-fixed(0,left);
+  @include fixed-left-bottom();
+}
+
+.fixed-left-top{
+  @include fixed-left-top();
+}
+.fixed-left-bottom{
+  @include fixed-left-bottom();
+}
+.fixed-right-top{
+  @include fixed-right-top();
+}
+.fixed-right-bottom{
+  @include fixed-right-bottom();
+}
+.fixed-top-center{
+  @include fixed-top-center();
+}
+.fixed-bottom-center{
+  @include fixed-bottom-center();
+}
+.fixed-left-middle{
+  @include fixed-left-middle();
+}
+.fixed-right-middle{
+  @include fixed-right-middle();
+}
+
+// overlay
+// ----------------------------------------
+.overlay{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.3);
+  z-index: 2;
+  @include position-fixed();
+}
+

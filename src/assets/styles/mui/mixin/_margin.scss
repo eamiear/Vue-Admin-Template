@@ -1,0 +1,41 @@
+///*
+// MARGIN  MIXIN
+//--------------------------*/
+
+@mixin margin($unit,$direction:all){
+  @if($direction == all){
+    margin: $unit !important;
+  }
+  @if($direction == top){
+    margin-top : $unit !important;
+  }
+  @if($direction == bottom){
+    margin-bottom: $unit !important;
+  }
+  @if($direction == left){
+    margin-left: $unit !important;
+  }
+  @if($direction == right){
+    margin-right: $unit !important;
+  }
+}
+
+@mixin margin-horizontal ($unit){
+  margin: 0 $unit !important;
+}
+@mixin margin-horizontal-alone($unit){
+  @include margin($unit,left);
+  @include margin($unit,right);
+}
+
+@mixin margin-vertical($unit){
+  margin: $unit 0 !important;
+}
+@mixin margin-vertical-alone($unit){
+  @include margin($unit,top);
+  @include margin($unit,bottom);
+}
+
+@mixin margin-short($vertical,$horizontal){
+  margin: $vertical $horizontal !important;
+}

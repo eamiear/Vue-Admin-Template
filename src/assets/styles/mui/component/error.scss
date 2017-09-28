@@ -1,0 +1,89 @@
+/*
+ * Page: Error
+ * -----------------------
+ */
+.#{$mui-css-prefix}-err-container{
+  text-align: center;
+  width: 66%;
+  height: 50%;
+  margin: auto;
+
+  &,
+  &:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #E8ECEF;
+  }
+  &:before{
+    position: fixed;
+    display: block;
+    content: " ";
+  }
+
+  .err-wrapper{
+    position: relative;
+    &:before,
+    &:after{
+      display: inline-block;
+      content: " ";
+      height: 10px;
+      border: none;
+      border-top: 1px solid #F98061;
+
+      position: absolute;
+      width: 50%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 100%;
+      margin: auto;
+
+      opacity: .6;
+      border-radius: 150%;
+    }
+
+    &:before{
+      bottom: -23px;
+      width: 35%;
+    }
+    &:after{
+      bottom: -2px;
+    }
+
+  }
+
+  .err-type{
+    display: inline-block;
+    font-size:2.5em;
+    color:#FF7550;
+
+    & .err-code{
+      margin: 0;
+    }
+  }
+  .err-desc{
+    display:inline-block;
+    padding-left: 20px;
+    text-align:left;
+
+    .err-desc-header,
+    .err-desc-content{
+      font-size: 1.5em;
+      line-height: 1.5em;
+      color: #F98061;
+      text-align: justify;
+      letter-spacing: .09rem;
+      margin: 0;
+    }
+    .err-desc-header{
+      display: inline-block;
+    }
+    .err-desc-content{
+      font-size: .8em;
+      color: #ABACAC;
+    }
+  }
+}

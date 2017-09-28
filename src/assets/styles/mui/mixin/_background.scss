@@ -1,0 +1,23 @@
+@mixin background-color($color,$bgcolor){
+  color: $color !important;
+  background-color: $bgcolor !important;
+}
+
+// background with hover
+@mixin background-color-factory(){
+  $hover: "";
+  @each $item in $color-list{
+    $color-name:  nth($item,1);
+    $color-value: nth($item,2);
+    $text-color:  nth($item,3);
+    .bg-#{$color-name},
+    .bg-#{$color-name}-hover:hover{
+      @include background-color($text-color, $color-value);
+    }
+    $hover: $hover + ".bg-#{$color-name}-hover:hover,";
+  }
+  #{$hover}{
+    -webkit-transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+    transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+  }
+}

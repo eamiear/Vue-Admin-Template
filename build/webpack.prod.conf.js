@@ -24,13 +24,13 @@ config.plugins.push(
     'process.env': env
   }),
   // split echarts into its own file
-  new webpack.optimize.CommonsChunkPlugin({
+ /* new webpack.optimize.CommonsChunkPlugin({
     async: 'echarts',
     minChunks (module) {
       const context = module.context
       return context && (context.indexOf('echarts') >= 0 || context.indexOf('zrender') >= 0)
     }
-  }),
+  }),*/
   new webpack.optimize.CommonsChunkPlugin({
     name: 'manifest',
     minChunks: Infinity

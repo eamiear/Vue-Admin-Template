@@ -1,5 +1,5 @@
 <template>
-    <a href="#" @click="toggleClick" class="sidebar-toggle" :class="{'is-active':isActive}" data-toggle="offcanvas" role="button">
+    <a href="#" @click="toggleClick" class="sidebar-toggle" :class="{'is-active':isActive}" role="button">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -23,19 +23,3 @@
   }
 </script>
 
-<style scoped>
-    .hamburger {
-        display: inline-block;
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        transform: rotate(0deg);
-        transition: .38s;
-        transform-origin: 50% 50%;
-    }
-
-    .hamburger.is-active {
-        transform: rotate(90deg);
-    }
-
-</style>

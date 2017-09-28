@@ -1,0 +1,86 @@
+/**
+// GRID
+// --------------------------------------------------*/
+
+.grid{
+  display: block;
+  width: 100%;
+
+}
+.grid-col{
+  position: relative;
+  display: block;
+  padding: 8px 16px;
+}
+
+.col-1{
+  width: 8.334%;
+}
+.col-2{
+  width: 16.667%;
+}
+.col-quarter,
+.col-3{
+  width: 24.999%;
+}
+.col-third,
+.col-4{
+  width: 33.333%;
+}
+.col-5{
+  width: 41.666%;
+}
+.col-6{
+  width: 49.999%;
+}
+.col-7{
+  width: 58.333%;
+}
+.col-8{
+  width: 66.666%;
+}
+.col-9{
+  width: 74.999%;
+}
+.col-10{
+  width: 83.333%;
+}
+.col-11{
+  width: 91.666%;
+}
+.col-12{
+  width: 99.999%;
+}
+.col-third,
+.col-quarter{
+  padding: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .grid{
+    display: table;
+    width: 100%;
+  }
+  .grid-col{
+    display: table-cell;
+  }
+}
+@media (min-width: 992px) {
+  .grid{
+    display: table;
+    width: 100%;
+  }
+  .grid-col{
+    display: table-cell;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid{
+    display: table;
+    width: 100%;
+  }
+  .grid-col{
+    display: table-cell;
+  }
+}

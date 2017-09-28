@@ -1,0 +1,9 @@
+@import "absolute";
+
+@mixin center-vertical($height){
+  width: 50%;
+  height: $height;
+  line-height: $height;
+  margin: auto;
+  @include absolute();
+}

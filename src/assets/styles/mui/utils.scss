@@ -1,0 +1,53 @@
+// Utilities
+// --------------------------
+
+@import "~compass-mixins/lib/compass/css3";
+.clear{
+  background: transparent !important;
+  &:hover,
+  &:focus{
+    outline: none;
+    background: transparent !important;
+  }
+  > a,
+  > a:hover,
+  > a:focus{
+    outline: none;
+    background: transparent !important;
+  }
+}
+// Block
+// --------------------------
+.block{
+  display: block !important;
+  width: 100%;
+}
+.inline-block{
+  @include inline-block();
+  //display: inline-block !important;
+}
+// Float
+// --------------------------
+.no-float{
+  float: none !important;
+}
+// Shadow
+// --------------------------
+.no-shadow{
+  box-shadow: none !important;
+}
+// Opacity
+// -----------------------------
+.opacity,
+.opacity-hover:hover{
+  //opacity: .6 !important;
+  //filter: alpha(opacity=60);
+  @include opacity(.6);
+}
+
+// Unstyled List
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

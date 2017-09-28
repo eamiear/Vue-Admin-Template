@@ -1,0 +1,214 @@
+.navicon, .navicon-about, .navicon-bell, .navicon-book, .navicon-cloud, .navicon-cog, .navicon-download, .navicon-dropdown, .navicon-export, .navicon-files, .navicon-hammer, .navicon-import, .navicon-lock, .navicon-refresh, .navicon-share, .navicon-switch, .navicon-synchronous, .navicon-tasks, .navicon-tv, .navicon-upload, .navicon-user-o, .navicon-user, .navicon-volume, .navicon-wrench {
+  background-image: inline-image('navicon-s9d75a54b5f.png');
+  background-repeat: no-repeat;
+}
+
+.navicon, .navicon-about, .navicon-bell, .navicon-book, .navicon-cloud, .navicon-cog, .navicon-download, .navicon-dropdown, .navicon-export, .navicon-files, .navicon-hammer, .navicon-import, .navicon-lock, .navicon-refresh, .navicon-share, .navicon-switch, .navicon-synchronous, .navicon-tasks, .navicon-tv, .navicon-upload, .navicon-user-o, .navicon-user, .navicon-volume, .navicon-wrench {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.navicon-about {
+  background-position: -16px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-about:hover, .navicon-about.about-hover {
+  background-position: 0 0;
+}
+
+.navicon-bell {
+  background-position: -48px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-bell:hover, .navicon-bell.bell-hover {
+  background-position: -32px 0;
+}
+
+.navicon-book {
+  background-position: -80px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-book:hover, .navicon-book.book-hover {
+  background-position: -64px 0;
+}
+
+.navicon-cloud {
+  background-position: -112px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-cloud:hover, .navicon-cloud.cloud-hover {
+  background-position: -96px 0;
+}
+
+.navicon-cog {
+  background-position: -144px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-cog:hover, .navicon-cog.cog-hover {
+  background-position: -128px 0;
+}
+
+.navicon-download {
+  background-position: -176px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-download:hover, .navicon-download.download-hover {
+  background-position: -160px 0;
+}
+
+.navicon-dropdown {
+  background-position: -212px 0;
+  height: 20px;
+  width: 20px;
+}
+.navicon-dropdown:hover, .navicon-dropdown.dropdown-hover {
+  background-position: -192px 0;
+}
+
+.navicon-export {
+  background-position: -248px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-export:hover, .navicon-export.export-hover {
+  background-position: -232px 0;
+}
+
+.navicon-files {
+  background-position: -280px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-files:hover, .navicon-files.files-hover {
+  background-position: -264px 0;
+}
+
+.navicon-hammer {
+  background-position: -327px 0;
+  height: 31px;
+  width: 31px;
+}
+.navicon-hammer:hover, .navicon-hammer.hammer-hover {
+  background-position: -296px 0;
+}
+
+.navicon-import {
+  background-position: -374px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-import:hover, .navicon-import.import-hover {
+  background-position: -358px 0;
+}
+
+.navicon-lock {
+  background-position: -406px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-lock:hover, .navicon-lock.lock-hover {
+  background-position: -390px 0;
+}
+
+.navicon-refresh {
+  background-position: -438px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-refresh:hover, .navicon-refresh.refresh-hover {
+  background-position: -422px 0;
+}
+
+.navicon-share {
+  background-position: -470px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-share:hover, .navicon-share.share-hover {
+  background-position: -454px 0;
+}
+
+.navicon-switch {
+  background-position: -517px 0;
+  height: 31px;
+  width: 31px;
+}
+.navicon-switch:hover, .navicon-switch.switch-hover {
+  background-position: -486px 0;
+}
+
+.navicon-synchronous {
+  background-position: -564px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-synchronous:hover, .navicon-synchronous.synchronous-hover {
+  background-position: -548px 0;
+}
+
+.navicon-tasks {
+  background-position: -596px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-tasks:hover, .navicon-tasks.tasks-hover {
+  background-position: -580px 0;
+}
+
+.navicon-tv {
+  background-position: -628px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-tv:hover, .navicon-tv.tv-hover {
+  background-position: -612px 0;
+}
+
+.navicon-upload {
+  background-position: -660px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-upload:hover, .navicon-upload.upload-hover {
+  background-position: -644px 0;
+}
+
+.navicon-user-o {
+  background-position: -692px 0;
+  height: 26px;
+  width: 26px;
+}
+
+.navicon-user {
+  background-position: -718px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-user:hover, .navicon-user.user-hover {
+  background-position: -676px 0;
+}
+
+.navicon-volume {
+  background-position: -750px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-volume:hover, .navicon-volume.volume-hover {
+  background-position: -734px 0;
+}
+
+.navicon-wrench {
+  background-position: -782px 0;
+  height: 16px;
+  width: 16px;
+}
+.navicon-wrench:hover, .navicon-wrench.wrench-hover {
+  background-position: -766px 0;
+}

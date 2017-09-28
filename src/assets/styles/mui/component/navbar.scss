@@ -1,0 +1,268 @@
+@charset "utf-8";
+///*
+// * Component: Navbar
+// * ----------------------
+// */
+
+.navbar.nav-custom{
+  height: $navbar-height-base;
+  font-family : "Microsoft Yahei";
+  font-size: ($font-size-base + 2);
+  background: inline-image($navbar-center-image);
+  position:relative;
+  z-index: 2;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 0;
+
+  &:before,&:after{
+    display:block;
+    content:" ";
+    height:$navbar-height-base;
+    width:$navbar-background-width;
+
+    position:absolute;
+    top:0;
+    z-index: -2;
+  }
+
+  //header左边添加背景图片
+  &:before{
+    left: 0;
+    background: inline-image($navbar-left-image) no-repeat;
+  }
+  //header右边添加背景图片
+  &:after{
+    width: $navbar-background-right-width;
+    right: 0;
+    background: inline-image($navbar-right-image);
+  }
+
+  a {
+    outline : none ;
+    text-decoration : none ;
+    color : #fff ;
+  }
+
+  .container,
+  .container-fluid {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .nav > li > a{
+    padding: 0;
+  }
+  .navbar-nav{
+    float: left;
+    margin: 0;
+
+    > li{
+
+      > a,
+      > .anchor{
+        display: inline-block;
+        padding: 0 20px;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        line-height : $navbar-height-base;
+
+        img {
+          margin-top: -8px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    padding: 0 20px 0 10px;
+    float: left;
+     margin-left: 0;
+    //padding : 0 45px 0 10px;
+    height:$navbar-height-base;
+    line-height: $navbar-height-base;
+
+    > img{
+      display: inline-block;
+      margin-top: -8px;
+    }
+    > .title{
+      color: #fff;
+      font: 22px "方正兰亭中黑","microsoft yahei";
+    }
+  }
+
+  .nav.navbar-right{
+    > li{
+      &,
+      &:hover,
+      &:focus,
+      > a,
+      > a:hover,
+      > a:focus{
+        outline: none;
+        background: transparent;
+      }
+
+      > a{
+        padding: 0 10px;
+      }
+
+      .dropdown-menu{
+        // override the navbar-nav > li > dropdown-menu
+        border-radius: 5px;
+
+        .navicon{
+          margin-right: 6px;
+        }
+      }
+    }
+    .user{
+      font-size: 14px;
+      .user-name{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+
+        max-width: 68px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    .arrow{
+      > a,
+      > .anchor{
+        padding-left: 0;
+      }
+
+      &.open{
+        //  for active dropdown-arrow
+        .navicon-dropdown,
+        .navicon-dropdown{
+          background-position: -192px 0;
+        }
+      }
+    }
+
+    // hover dropdown menu for activating icon
+    .dropdown-menu.dropdown-menu-hover{
+      > li > a:hover{
+        .navicon-about{
+          background-position: 0 0;
+        }
+        .navicon-bell{
+          background-position: -32px 0;
+        }
+        .navicon-book {
+          background-position: -64px 0;
+        }
+        .navicon-cloud {
+          background-position: -96px 0;
+        }
+        .navicon-cog {
+          background-position: -128px 0;
+        }
+        .navicon-download{
+          background-position: -160px 0;
+        }
+        .navicon-dropdown {
+          background-position: -192px 0;
+        }
+        .navicon-export {
+          background-position: -232px 0;
+        }
+        .navicon-files {
+          background-position: -264px 0;
+        }
+        .navicon-hammer {
+          background-position: -296px 0;
+        }
+        .navicon-import {
+          background-position: -358px 0;
+        }
+        .navicon-lock {
+          background-position: -390px 0;
+        }
+        .navicon-refresh {
+          background-position: -422px 0;
+        }
+        .navicon-share {
+          background-position: -454px 0;
+        }
+        .navicon-switch {
+          background-position: -486px 0;
+        }
+        .navicon-synchronous {
+          background-position: -548px 0;
+        }
+        .navicon-tasks {
+          background-position: -580px 0;
+        }
+        .navicon-tv {
+          background-position: -612px 0;
+        }
+        .navicon-upload {
+          background-position: -644px 0;
+        }
+        .navicon-user {
+          background-position: -676px 0;
+        }
+        .navicon-volume {
+          background-position: -734px 0;
+        }
+        .navicon-wrench {
+          background-position: -766px 0;
+        }
+      }
+    }
+  }
+}
+
+// ====  Theme
+// Blue navbar
+.navbar-blue {
+
+  .navbar-brand {
+    color: $navbar-blue-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-blue-brand-hover-color;
+      background-color: $navbar-blue-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-blue-color;
+  }
+
+  .navbar-nav {
+    > li{
+      &:hover,&.active{
+        background-color : $navbar-blue-item-link-bg-color ;
+      }
+    }
+    > li > a {
+      color: $navbar-blue-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-blue-link-hover-color;
+        background-color: $navbar-blue-link-hover-bg;
+        background: inline_image($navbar-active-image);
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-blue-link-active-color;
+        background-color: $navbar-blue-link-active-bg;
+        background: inline_image($navbar-active-image);
+      }
+    }
+  }
+}

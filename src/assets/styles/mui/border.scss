@@ -1,0 +1,14 @@
+//@import "mixin/border";
+// Border Colors
+// --------------------------
+@include border-color-factory;
+// Border Borders
+// ------------------------------------------
+@include border-factory();
+// no border
+// ------------------------------------------
+//@include border-single-none;
+
+// transparent border
+// ------------------------------------------
+//@include border-single-transparent;

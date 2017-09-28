@@ -1,0 +1,51 @@
+//@import "mixin/background";
+
+// Background Colors
+// --------------------------
+
+@include background-color-factory;
+//Disabled!
+[class^="bg-"].disabled {
+  @include opacity(.65);
+}
+// Gradient Background colors
+.bg-teal-gradient {
+  @include gradient($teal, $teal, lighten($teal, 16%));
+  color: #fff;
+}
+.bg-light-blue-gradient {
+  @include gradient($light-blue,$light-blue, lighten($light-blue, 12%));
+  color: #fff;
+}
+.bg-blue-gradient {
+  @include gradient($blue, $blue, lighten($blue, 7%));
+  color: #fff;
+}
+.bg-aqua-gradient {
+  @include gradient($aqua, $aqua, lighten($aqua, 7%));
+  color: #fff;
+}
+.bg-yellow-gradient {
+  @include gradient($yellow, $yellow, lighten($yellow, 16%));
+  color: #fff;
+}
+.bg-purple-gradient {
+  @include gradient($purple, $purple, lighten($purple, 16%));
+  color: #fff;
+}
+.bg-green-gradient {
+  @include gradient($green, $green, lighten($green, 7%));
+  color: #fff;
+}
+.bg-red-gradient {
+  @include gradient($red, $red, lighten($red, 10%));
+  color: #fff;
+}
+.bg-black-gradient {
+  @include gradient($black, $black, lighten($black, 10%));
+  color: #fff;
+}
+.bg-maroon-gradient {
+  @include gradient($maroon, $maroon, lighten($maroon, 10%));
+  color: #fff;
+}

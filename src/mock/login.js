@@ -5,22 +5,22 @@ const userMap = {
     role: ['admin'],
     token: 'admin',
     introduction: '我是超级管理员',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    avatar: 'http://placehold.it/160x160',
+    name: '苏打水'
   },
   editor: {
     role: ['editor'],
     token: 'editor',
     introduction: '我是编辑',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Normal Editor'
+    avatar: 'http://placehold.it/160x160',
+    name: '苏打天'
   },
   developer: {
     role: ['develop'],
     token: 'develop',
     introduction: '我是开发',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: '工程师小王'
+    avatar: 'http://placehold.it/160x160',
+    name: '苏打方'
   }
 }
 

@@ -1,0 +1,176 @@
+///*
+// * Component: Toolbar
+// * ----------------
+// */
+
+.toolbar{
+  font-size: $font-size;
+  padding: $unit-4 $unit-12;
+  border: 1px solid $light-grey;
+  background: $white;
+
+  @include clearfix;
+
+  & .header{
+    display: inline-block;
+   // font-size: $font-size;
+    float: left;
+    text-align: left;
+    color: inherit;
+    //padding: (($unit-48 - $font-size)-10 )/2 0;
+    padding: 9px 0;
+
+    .icon{
+      font-size: 12px;
+      color: #44a5f3;
+    }
+  }
+
+  & .center{
+
+  }
+
+  // content
+  & .content{
+    padding: 5px 0;
+    text-align: right;
+
+    // content-item
+    .ct-item{
+      display: inline-block;
+      margin: 0 12px 0 -5px;
+      vertical-align: middle;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &.btn-group{
+        > button{
+          padding: 2px 10px;
+          line-height: 1.5;
+          border-radius: 3px;
+
+          &:focus,
+          &:hover{
+            outline: none;
+
+            .icon{
+              color: #2196F3;
+            }
+          }
+        }
+
+        .icon{
+          color: #777777;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // button list
+  & .btn-list{
+
+    margin: $unit-0;
+
+    & > li{
+      display: inline-block;
+      position: relative;
+      border: none;
+      padding: $unit-4 $unit-8;
+      vertical-align: middle;
+    }
+
+    & > li .btn {
+      i{
+        margin-right: $unit-4 + 1;
+      }
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  // filter
+  & .btn-list.filter{
+    float: right;
+    text-align: right;
+
+    > li button,
+    > li .btn{
+      font-size: 12px;
+      padding: 2px 14px;
+
+      & i,
+      & .icon,
+      & .fa{
+        margin-left: 3px;
+      }
+    }
+  }
+
+  // float right
+  & .btn-list.right{
+    position: relative;
+    float: right;
+    text-align: right;
+  }
+
+  // document flow
+  & .btn-list.static{
+    float: none;
+    text-align: left;
+
+    .alert{
+      margin-bottom: $unit-0;
+      padding: $unit-4 $unit-16;
+    }
+    .alert-dismissable, .alert-dismissible{
+      padding-right: $unit-32 + 3;
+    }
+
+    .close{
+      &:hover, &:focus,
+      & > span:hover, & > span:focus{
+        outline: none;
+      }
+    }
+  }
+
+  // more
+  &.multiply{
+
+    .multi{
+      display: inline-block;
+      color: inherit;
+      padding: 4px 8px;
+      float: right;
+
+      > button,
+      > .btn{
+        font-size: 12px;
+        padding: 4px 10px;
+
+        & i,
+        & .icon,
+        & .fa{
+          margin-left: 3px;
+        }
+
+        &:focus, &:active:focus, &.active:focus, &.focus, &:active.focus, &.active.focus{
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,49 @@
+/*
+ * Component: gotop
+ * -----------------------
+ */
+.btn-scroll-top{
+  display: inline-block;
+  border: none;
+  color: $white;
+  background-color: $blue;
+  position: absolute;
+  bottom: $unit-2;
+  right: $unit-4;
+  z-index: 9999;
+}
+.scroll-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  opacity: 1;
+  z-index: 9999;
+  display: none;
+
+  .scroll-item,
+  a{
+    display: block;
+    padding: 10px 20px;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #444;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    cursor: pointer;
+
+    &:hover{
+      background-color: rgba(0,0,0,.7)
+     }
+    &:active{
+      background-color: rgba(0,0,0,.75)
+    }
+    i{
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Image & avatar mixins
+//--------------------------------------------------------
+// image size
+@mixin image-size(){
+  @each $size in $image-size{
+    $size-text:  nth($size,1);
+    $size-value: nth($size,2);
+    .image-#{$size-text}{
+      width: $size-value !important;
+      height: $size-value !important;
+    }
+  }
+}
+// image align
+@mixin image-align(){
+  @each $align in $image-align{
+    .image-#{$align}{
+      display: inline-block;
+      vertical-align: $align;
+    }
+  }
+}
+// avatar size
+@mixin avatar-size(){
+  @each $size in $avatar-size{
+    $type:  nth($size,1);
+    $value: nth($size,2);
+    .avatar-#{$type}{
+      width: $value !important;
+      height: $value!important;
+    }
+  }
+}

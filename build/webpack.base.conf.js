@@ -1,4 +1,5 @@
 var webpack = require('webpack'),
+  path = require('path'),
   // ENV = require('./config/ENV'),
   // PATHS = require('./config/PATHS'),
   config = require('./config'),
@@ -22,7 +23,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': config.paths.SRC
+      '@': config.paths.SRC,
+      'static': path.resolve(__dirname, '../static'),
+      'jquery': 'jquery'
     }
   },
   module: {
@@ -74,10 +77,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: config.paths.SRC.join('index.html')
-    })/*,
+    }),
     new webpack.ProvidePlugin({
-      $: 'jQuery',
-      'jQuery': 'jQuery'
-    })*/
+      $: 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ]
 }

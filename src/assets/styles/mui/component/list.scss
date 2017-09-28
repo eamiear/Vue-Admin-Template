@@ -1,0 +1,103 @@
+///*
+// * Component: List
+// * ----------------
+// */
+.list{
+
+  .list-item{
+    padding: $unit-8 $unit-16;
+  }
+  .list-group-item,
+  .list-item{
+    @include clearfix;
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
+    .avatar,
+    > img{
+      float: left;
+      margin-right: $unit-12;
+      max-width:100%;
+      max-height:100%;
+    }
+
+    > .header,
+    > .meta,
+    > .description{
+      margin: $unit-0;
+    }
+
+    .header{
+      font-size: $font-size;
+      font-weight: 600;
+      color: $dark-grey;
+    }
+    .meta{
+      font-size: $font-size-tiny;
+      color: $deep-grey;
+    }
+    .description{
+      font-size: $font-size - 1;
+      color: $grey;
+      padding: $unit-2 $unit-0;
+    }
+    .header + .description,
+    .meta + .description{
+      margin-top: 2px;
+    }
+    .extra{
+
+    }
+    .icon{
+      float: right;
+
+    }
+  }
+}
+
+.list-slim{
+  .list-group-item,
+  .list-item{
+    border-color: transparent;
+    border-bottom-color: $deep-grey;
+    margin-bottom: 0;
+  }
+}
+.list-blockquote{
+  .list-group-item,
+  .list-item{
+    border-color: transparent;
+    border-left: 3px solid transparent;
+    border-top-left-radius: 4px;
+    margin-bottom: 0;
+
+    -webkit-transition: border .3s;
+    -moz-transition: border .3s;
+    -o-transition: border .3s;
+    transition: border .3s;
+  }
+}
+
+.hover-list{
+  .list-group-item:hover,
+  .list-item:hover{
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+
+    background-color: #f5f5f5;
+    -webkit-transition: background-color .3s, border-color .3s;
+    -moz-transition: background-color .3s, border-color .3s;
+    -o-transition: background-color .3s, border-color .3s;
+    transition: background-color .3s, border-color .3s;
+  }
+}
+.hover-list.list-blockquote{
+  .list-group-item:hover,
+  .list-item:hover{
+    border-left-color: $teal;
+  }
+}

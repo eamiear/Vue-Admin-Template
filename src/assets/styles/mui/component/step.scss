@@ -1,0 +1,141 @@
+///*
+// * Component: Step
+// * ----------------
+// */
+
+
+.steps{
+
+  display: inline-block;
+  border-radius: .28571429rem;
+  border: 1px solid $steps-border-color;
+
+  &:before,
+  &:after{
+    display: block;
+    content: ' ';
+    clear: both;
+  }
+
+  .step{
+    position: relative;
+    text-align: center;
+    margin: 0;
+
+    padding: 1.14285714em 2em;
+    background:$step-bg-color;
+    color: $step-color;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-right: 1px solid $step-border-right-color;
+    -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+    transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+
+    float: left;
+
+    &:first-child{
+      padding-left: 2em;
+      border-radius: .28571429rem 0 0 .28571429rem;
+    }
+
+    &:last-child {
+      border-radius: 0 .28571429rem .28571429rem 0;
+      border-right: none;
+      margin-right: 0;
+
+      &:after{
+        visibility: hidden;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      top: 50%;
+      right: 0;
+      border: solid;
+      background-color: $step-arrow-bg-color;
+      width: 1.14285714em;
+      height: 1.14285714em;
+      border-color: $step-arrow-border-color;
+      border-width: 0 1px 1px 0;
+      -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+      transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+      -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+      transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    }
+
+    >.icon {
+      vertical-align: top;
+      line-height: 1;
+      font-size: 2.5em;
+      margin: 4px 1rem 0 0;
+    }
+
+    >.icon,
+    >.icon~.content{
+      display: inline-block;
+    }
+
+    .title {
+      font-size: 1.14285714em;
+      font-weight: 700;
+    }
+
+    .description {
+      font-weight: 400;
+      font-size: .92857143em;
+      color: $step-description-color;
+    }
+
+    .title~.description {
+      margin-top: .25em;
+    }
+  }
+
+  .active.step:after,
+  .step:after {
+    display: block;
+  }
+
+  .link.step,
+  a.step {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:hover::after{
+      background: $link-step-hover-bg-color;
+      color: $link-step-hover-color;
+    }
+  }
+
+  .link.active.step:hover,
+  .link.active.step:hover::after,
+  a.active.step:hover,
+  a.active.step:hover::after {
+    cursor: pointer;
+    background: $link-step-active-hover-bg-color;
+    color: $link-step-active-hover-color;
+  }
+
+  .step.active:before,
+  .active.step .icon {
+    color: $link-step-active-icon-color;
+  }
+
+  .disabled.step{
+    cursor: auto;
+    background: $disabled-step-bg-color;
+    pointer-events: none;
+
+    &,
+    & .description,
+    & .title {
+      color: $disabled-step-content-color;
+    }
+  }
+
+}

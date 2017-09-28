@@ -1,0 +1,38 @@
+@mixin padding($unit,$direction:all){
+  @if($direction == all){
+    padding: $unit !important;
+  }
+
+  @if($direction == top){
+    padding-top : $unit !important;
+  }
+
+  @if($direction == bottom){
+    padding-bottom: $unit !important;
+  }
+
+  @if($direction == left){
+    padding-left: $unit !important;
+  }
+
+  @if($direction == right){
+    padding-right: $unit !important;
+  }
+}
+@mixin padding-horizontal ($unit){
+  padding: 0 $unit !important;
+}
+@mixin padding-horizontal-alone($unit){
+  @include padding($unit,left);
+  @include padding($unit,right);
+}
+@mixin padding-vertical($unit){
+  padding: $unit 0 !important;
+}
+@mixin padding-vertical-alone($unit){
+  @include padding($unit,top);
+  @include padding($unit,bottom);
+}
+@mixin padding-short($vertical,$horizontal){
+  padding: $vertical $horizontal !important;
+}

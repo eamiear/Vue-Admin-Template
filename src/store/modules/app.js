@@ -3,13 +3,13 @@ import Cookies from 'js-cookie'
 const app = {
   state: {
     sidebar: {
-      opened: !+Cookies.get('sidebarStatus')
+      opened: !!+(Cookies.get('sidebarStatus') || 0)
     },
     visitedViews: []
   },
   mutations: {
     TOGGLE_SIDEBAR: state => {
-      if (state.sidebar.opened) {
+      if (!state.sidebar.opened) {
         Cookies.set('sidebarStatus', 1)
       } else {
         Cookies.set('sidebarStatus', 0)
@@ -32,13 +32,13 @@ const app = {
     }
   },
   actions: {
-    ToggleSideBar({ commit }) {
+    ToggleSideBar ({ commit }) {
       commit('TOGGLE_SIDEBAR')
     },
-    addVisitedViews({ commit }, view) {
+    addVisitedViews ({ commit }, view) {
       commit('ADD_VISITED_VIEWS', view)
     },
-    delVisitedViews({ commit, state }, view) {
+    delVisitedViews ({ commit, state }, view) {
       return new Promise((resolve) => {
         commit('DEL_VISITED_VIEWS', view)
         resolve([...state.visitedViews])

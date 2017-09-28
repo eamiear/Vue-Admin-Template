@@ -1,0 +1,61 @@
+///*
+// * Plugin: Ztree
+// * ---------------
+// */
+.ztree{
+  li a.curSelectedNode{
+//    border:none;
+//    height: inherit;
+  }
+}
+.ztree.arrow{
+  li{
+    line-height:25px;
+    a{
+      color:#666;
+      height: inherit;
+    }
+    a.curSelectedNode{
+      height: inherit;
+      background-color: #fff;
+      border:none;
+      /*border:solid 1px #fff;*/
+      color:#0077ea;
+    }
+    span.button{
+      margin-top:5px;
+      &.bottom_close {
+        background-position: -74px -41px;
+      }
+      &.bottom_open {
+        background-position: -92px -43px;
+      }
+      &.center_open{
+        background-position: -92px -23px;
+      }
+      &.center_close {
+        background-position: -74px -23px;
+      }
+      &.roots_open {
+        background-position: -92px -61px;
+      }
+      &.roots_close {
+        background-position: -74px -59px;
+      }
+    }
+    .button.icon{
+      margin: 0 0 0 3px;
+      background-position: center;
+      vertical-align: middle;
+    }
+    .button.add.icon{
+      background-image: inline-image("plug/tree/add.png");
+    }
+    .button.edit.icon{
+      background-image: inline-image("plug/tree/modify.png");
+    }
+    .button.remove.icon{
+      background-image: inline-image("plug/tree/delete.png");
+    }
+  }
+}

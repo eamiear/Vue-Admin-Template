@@ -1,0 +1,39 @@
+@mixin content-base{
+  padding: $unit-4 $unit-12;
+  margin: $unit-0;
+  border: none;
+
+  > .header,
+  > .meta,
+  > .description{
+    margin: $unit-0;
+  }
+
+  > .header{
+    display: block;
+    color: $dark-grey\9;
+    color: rgba(0,0,0,.85);
+    font-weight: 700;
+  }
+  > .meta{
+    font-size: $font-size-small;
+    color: rgba(0,0,0,.4);
+  }
+  > .header + .description,
+  > .meta + .description{
+    /* margin-top: -6px;*/
+    padding: 4px 0;
+  }
+  > .description{
+    font-size: 13px;
+    color: $grey\9;
+    color: rgba(0,0,0,.68);
+    clear: both;
+  }
+  > .extra-content{
+
+  }
+  > .icon{
+
+  }
+}

@@ -1,0 +1,152 @@
+/*
+ * Plugin: Unslider
+ * ---------------
+ */
+
+//
+// 	Slider Pagination
+// --------------------------- */
+.unslider-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+
+.unslider-container-horizontal{
+  .unslider-pagination-bullets,
+  .unslider-pagination-fraction{
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.unslider-pagination-fraction {
+    font-size: 12px;
+    color: #999;
+    width: 100%;
+    padding: 5px;
+    margin-top: -27px;
+}
+//
+// 	Slider Arrow
+// --------------------------- */
+.unslider-arrow {
+    font-size: 50px;
+    left: 0;
+    top: 29%;
+    padding: 5px 5px;
+    border: 1px solid #c9c9c9;
+    background: #f5f5f5;
+
+  &,
+  &:hover,
+  &:focus{
+    color: #8a8a8a;
+  }
+
+  &:hover{
+    background: #fff;
+  }
+  &:focus{
+    background: #e4e4e4;
+  }
+  &.prev{
+    border-left: transparent;
+    border-radius: 0 5px 5px 0;
+    left: 0;
+  }
+  &.next{
+    border-right: transparent;
+    border-radius: 5px 0  0  5px;
+    right: 0;
+  }
+}
+//
+// 	Slider Arrow
+// --------------------------- */
+.unsilder-radius-arrow {
+
+  .unslider-arrow {
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    font-size: 28px;
+    padding: 0;
+    border: 1px solid transparent;
+    text-align: center;
+    line-height: 28px;
+
+    top: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,.2) no-repeat 50% 50%;
+    border-radius: 32px;
+    opacity: .6;
+    transition: opacity .2s;
+
+    &,
+    &:hover,
+    &:focus{
+      color: #fff;
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+
+    &.prev{
+      left: 40px;
+    }
+    &.next{
+      right: 40px;
+    }
+  }
+}
+
+//
+// 	Slider Dots
+// --------------------------- */
+.unslider-dots{
+  position: relative;
+  .unslider-nav {
+    z-index: 333;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    top: auto;
+    margin: 0;
+
+    ol {
+      list-style: none;
+      text-align: center;
+    }
+
+    ol li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      background: transparent;
+      border-radius: 5px;
+      overflow: hidden;
+      text-indent: -999em;
+      border: 2px solid #eee;
+      cursor: pointer;
+    }
+
+    ol li.unslider-active {
+      background: #eee;
+      cursor: default;
+    }
+  }
+}

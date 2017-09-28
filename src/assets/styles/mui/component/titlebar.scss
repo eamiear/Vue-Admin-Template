@@ -1,0 +1,102 @@
+///*
+// * Component: Title Bar
+// * ----------------
+// */
+@import "../bootstrap/mixins";
+
+.titlebar{
+
+  @include clearfix();
+
+  padding: 2px;
+
+  .title{
+    display: inline-block;
+    font-size: $font-size;
+    color: #333;
+    padding: 0 3px;
+  }
+
+  .more{
+    font-size: $unit-12;
+    color: $grey;
+    float: right;
+    cursor: pointer;
+    padding: 0 $unit-12;
+
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+
+    > i,
+    > .icon,
+    > .fa,
+    > .glyphicon{
+      margin-left: 3px;
+    }
+
+    &:focus,
+    &:visited,
+    &:active{
+      outline: none;
+    }
+
+    &:visited{
+      color: #a94442;
+    }
+    &:hover,
+    &:active{
+      color: #666;
+    }
+    &:focus{
+      color: #747d67;
+    }
+  }
+
+  &.left-line{
+    border-left: $left-line-width solid $left-line-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  &.bottom-line{
+    padding: 0;
+    border-bottom: $bottom-line-width solid $bottom-line-color;
+
+    & .title{
+      padding: 4px 60px 4px 10px;
+      border-bottom: $bottom-line-width solid $title-bottom-line-color;
+      margin-bottom: -$bottom-line-width;
+    }
+  }
+
+  &.single-bottom-line{
+    padding: 0;
+    border-bottom: $single-bottom-line-width solid $single-bottom-line-color;
+    & .title{
+      padding: 4px 10px;
+    }
+  }
+
+  &.bottom-line-short{
+    padding: 0;
+    & .title{
+      border-bottom: 2px solid $title-bottom-line-color;
+      padding: 4px 15px;
+    }
+  }
+
+  &.arrow{
+    padding: 0;
+
+    .arrow-left,
+    .arrow-right,
+    .arrow-up,
+    .arrow-down{
+      border-left-color: #999;
+      border-width: 6px;
+      vertical-align: middle;
+    }
+  }
+}
